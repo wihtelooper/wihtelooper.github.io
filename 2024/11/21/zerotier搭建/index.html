@@ -17,17 +17,19 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也就8.">
+  <meta name="description" content="这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zerotier搭建">
-<meta property="og:url" content="http://example.com/2024/11/19/zerotier%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:url" content="http://example.com/2024/11/21/zerotier%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="klolice的学习站点">
-<meta property="og:description" content="这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也就8.">
+<meta property="og:description" content="这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也">
 <meta property="og:locale">
-<meta property="article:published_time" content="2024-11-19T05:36:15.869Z">
-<meta property="article:modified_time" content="2024-11-19T09:56:08.607Z">
+<meta property="og:image" content="http://example.com/images/zerotier_ip.webp">
+<meta property="article:published_time" content="2024-11-21T08:57:10.661Z">
+<meta property="article:modified_time" content="2024-11-21T09:07:15.352Z">
 <meta property="article:author" content="klolice">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/zerotier_ip.webp">
   
   <!-- 站点验证相关 -->
   
@@ -148,7 +150,7 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/19/zerotier%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/21/zerotier%E6%90%AD%E5%BB%BA/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
@@ -156,7 +158,7 @@
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2024-11-19T05:36:15.869Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-11-19</time></li>
+                <li><time datetime="2024-11-21T08:57:10.661Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-11-21</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">klolice</span>
                 </li>
@@ -165,7 +167,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            856
+                            ~2.43K
                         
                         字
                     </li>
@@ -177,27 +179,46 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1732010168607"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1732180035352"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p>这是我对于自己在内网穿透学习时的一点小心得，使用的工具是<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。<br>我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。<br>它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也就8.32 MBps.笔者推测是受到家庭网络影响，但是在看一集24分钟的mov格式下比特率不超过4000kbps的动画还是勉强够用的。<br>这篇文章先是讲述我在进行ZeroTier搭建时的过程，以及一些问题。</p>
-<h2 id="ZeroTier初始化设置"><a href="#ZeroTier初始化设置" class="headerlink" title="ZeroTier初始化设置"></a>ZeroTier初始化设置</h2><h3 id="ZeroTier网站设置"><a href="#ZeroTier网站设置" class="headerlink" title="ZeroTier网站设置"></a>ZeroTier网站设置</h3><p>进入<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> 进行注册，注册好后在创建界面点击 [create a network] ，点击新生成的 [network id]（记住这个id,它将是你的设备加入你的私人局域网的申请标签）进入到网络设置界面，在Settings-Basics-Name栏中给自己的网络命名，在Settings-Advanced模块里的[IPv4 Auto-Assign]中选择自己喜欢的网段，这个网段会作为你的隧道里的私人网段。</p>
-<h3 id="ZeroTierWindows设置"><a href="#ZeroTierWindows设置" class="headerlink" title="ZeroTierWindows设置"></a>ZeroTierWindows设置</h3><p>在<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> 官网下载ZeroTier客户端，下载成功后在右下角点击 join new network,将上一步中的[network id]填入刚刚弹出的对话框。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><p>   这是我对于自己在内网穿透学习时的一点小心得，使用的工具是<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。<br>我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是手机都可以做到互相访问数据以及一些本地的管理系统。<br>它同时也给我带来了远程看番等一些好处，不过，实际上它的稳定性受到当地网络限制，我在使用SMB共享时，最高速率也就8.32 MBps.笔者推测是受到家庭网络影响，但是在看一集24分钟的mov格式下比特率不超过4000kbps的动画还是勉强够用的。<br>这篇文章先是讲述我在进行ZeroTier搭建时的过程，以及一些问题。</p>
+<h3 id="ZeroTier网站设置"><a href="#ZeroTier网站设置" class="headerlink" title="ZeroTier网站设置"></a>ZeroTier网站设置</h3><p>  进入<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> 进行注册，注册好后在创建界面点击 [create a network] ，点击新生成的 [network id]（记住这个id,它将是你的设备加入你的私人局域网的申请标签）进入到网络设置界面，在Settings-Basics-Name栏中给自己的网络命名，在Settings-Advanced模块里的[IPv4 Auto-Assign]中选择自己喜欢的网段，这个网段会作为你的隧道里的私人网段。</p>
+<h3 id="ZeroTier-Windows设置"><a href="#ZeroTier-Windows设置" class="headerlink" title="ZeroTier Windows设置"></a>ZeroTier Windows设置</h3><p>  在<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> 官网下载ZeroTier客户端，下载成功后在右下角点击 join new network,将上一步中的[network id]填入刚刚弹出的对话框，再单击join即可，然后我们回到<a target="_blank" rel="noopener" href="https://www.zerotier.com/">ZeroTier</a> 网站 ，在Members里会出现你的设备，通过左面选中后，在单击Authorize。这样你的windows设备就加入到你的私人网络里了，将系统分配给你的Managed IP记住。</p>
+<h3 id="ZeroTier-Android设置"><a href="#ZeroTier-Android设置" class="headerlink" title="ZeroTier Android设置"></a>ZeroTier Android设置</h3><p>   通过Google商店下载ZeroTier，打开app后点击➕，同样把[network id]输入到网络ID栏中，再点击添加网络，同上一步一样在网站中将你的手机设备进行认证，同样记住你的Managed IP。<br>   现在你就拥有两台加入到私人网络的设备，可以尝试用电脑去ping手机的Managed IP，但是其实你会发现，有可能ping不通，或者延迟在2000ms左右，这是因为ZeroTier的服务器在国外，对于在国内打洞阻碍很多，所以接下来我们需要建立自己的moon节点，作为打洞的辅助，提升我们的使用体验。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping 10.147.17.23</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="ZeroTier-moon服务器搭建"><a href="#ZeroTier-moon服务器搭建" class="headerlink" title="ZeroTier moon服务器搭建"></a>ZeroTier moon服务器搭建</h3><p>  随便去一个大厂买一台便宜的配置最低的服务器，moon节点不会作为中转使用，只负责连接前的打洞，所以对于配置要求很低。装一个Ubuntu的系统，先把防火墙的9993的端口开放（udp、tcp）。进入到操作界面，安装curl.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install curl</span><br></pre></td></tr></table></figure>
+<p>  再通过脚本下载ZeroTier</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -s https://install.zerotier.com/ |<span class="built_in">sudo</span> bash</span><br></pre></td></tr></table></figure>
+<p>  启动并开启自启</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl start zerotier-one.service</span><br><span class="line">$ systemctl <span class="built_in">enable</span> zerotier-one.service</span><br></pre></td></tr></table></figure>
+<p>  加入到网络</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zerotier-cli <span class="built_in">join</span> network <span class="built_in">id</span></span><br></pre></td></tr></table></figure>
+<p>  进入安装目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /var/lib/zerotier-one/</span><br></pre></td></tr></table></figure>
+<p>  生成节点配置(moon)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zerotier-idtool initmoon identity.public&gt; moon.json</span><br></pre></td></tr></table></figure>
+<p>  通过vi编辑配置，或者是你的云服务器自带的功能去编辑json的配置，进入到moon.json里，修改成公网IP地址，改成你买的服务器的地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi moon.json</span><br></pre></td></tr></table></figure>
+<p><img src="/images/zerotier_ip.webp" alt="修改ip地址的位置"><br>  生成签名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zerotier-idtool genmoon moon.json</span><br></pre></td></tr></table></figure>
+<p>  此时应该会生成一个000000xxxxxx.moon的文件，创建一个moons.d的目录,将刚刚的000000xxxxxx.moon文件放入到moons.d中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> moons.d <span class="comment">#创建目录</span></span><br><span class="line">$ <span class="built_in">mv</span> 000000xxxxxx.moon moons.d/ <span class="comment">#移动文件</span></span><br></pre></td></tr></table></figure>
+<p>  重新启动ZeroTier服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart zerotier-one <span class="comment">#创建目录</span></span><br></pre></td></tr></table></figure>
+<p>  想办法把刚刚的000000xxxxxx.moon文件下载下来即可</p>
+<h2 id="Windows及Android系统moon文件导入"><a href="#Windows及Android系统moon文件导入" class="headerlink" title="Windows及Android系统moon文件导入"></a>Windows及Android系统moon文件导入</h2><p>  首先是windows,快捷键 Win+R，输入 services.msc，启动服务程序；找到 ZeroTier One 服务程序，右键属性找到可执行文件路径；在可执行路径下创建 moons.d 文件夹，将xxx.moon 拷贝到该文件夹下，然后再重启 ZeroTier One 服务。<br>  此时可以通过cmd输入查看节点，若出现服务器 IP，即表示 moon 连接成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zerotier-cli listpeers <span class="comment">#查看节点</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>  手机的话通过app右上角的的按钮找到入轨，单击添加，从文件导入，选中刚刚的000000xxxxxx.moon即可。<br>  此时通过右上角的按钮查看结点列表，如果看到节点类型为Moon中转的节点并且ip为你购买的服务器的公网地址则表明成功。</p>
+<h2 id="OpenWrt的moon文件导入"><a href="#OpenWrt的moon文件导入" class="headerlink" title="OpenWrt的moon文件导入"></a>OpenWrt的moon文件导入</h2><p>  开启ZeroTier后，将moon服务器将生成的0000000xxxx.moon复制到&#x2F;etc&#x2F;zerotier&#x2F;moons.d</p>
+<p>  现在你可以在在任意节点，通过ping的方式查看延迟，网络环境好的情况下最低应在15ms左右。</p>
+<p>  下一篇我会介绍一下我自己在家搭建windows服务器时的过程以及碰到的问题。</p>
 </div>
         </div>
         
@@ -251,7 +272,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2024/11/19/zerotier%E6%90%AD%E5%BB%BA/",
+                text: "http://example.com/2024/11/21/zerotier%E6%90%AD%E5%BB%BA/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -263,9 +284,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2024/11/19/zerotier%E6%90%AD%E5%BB%BA/";
+            const hostUrl       = "http://example.com/2024/11/21/zerotier%E6%90%AD%E5%BB%BA/";
             const title         = "「zerotier搭建」";
-            const excerpt       = `这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电脑还是...`;
+            const excerpt       = `   这是我对于自己在内网穿透学习时的一点小心得，使用的工具是ZeroTier ，它的优势在于可以在基本上全平台去使用，包含windows、Android、OpenWrt。我通过它让我可以在公司、家里、或者其它外部环境下，不管是使用电...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -287,7 +308,7 @@
                     
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-11-19T09:56:08.607Z" itemprop="dateModified">最后编辑：2024-11-19</time>
+                    <time datetime="2024-11-21T09:07:15.352Z" itemprop="dateModified">最后编辑：2024-11-21</time>
                 </div>
             </div>
         </footer>
@@ -372,7 +393,7 @@
         
           
           
-            <a class="list-group-item" href="/2024/11/19/zerotier%E6%90%AD%E5%BB%BA/"><i class="fa  fa-book"></i> zerotier搭建</a>
+            <a class="list-group-item" href="/2024/11/21/zerotier%E6%90%AD%E5%BB%BA/"><i class="fa  fa-book"></i> zerotier搭建</a>
             
           
         
