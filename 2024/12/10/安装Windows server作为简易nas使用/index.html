@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="/images/user.webp">
   
-  <title>如何制作属于自己的Grub主题 | klolice的学习站点</title>
+  <title>安装Windows server作为简易nas使用 | klolice的学习站点</title>
   
   <meta name="author" content="klolice" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -17,16 +17,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="最近给[Ventoy]换了一块新的大U盘，搞了很多新的镜像进去，看着[Ventoy]的默认丑界面陷入了沉思，想起来它的主题是基于GRUB的就想着可以自己自定义一套主题来使用。 捷径  从头做GRUB需要额外用linux的系统，鉴于我在上班摸鱼时搞完这一切的宗旨，我决定去一个主题站 下载预设好的主题，在配置文件进行修改就行。 参数配置  在下载好的文件中找到带有theme关键字的txt文件打开它">
+  <meta name="description" content="前言由于淘汰下来一个联想80NV的笔记本电脑，一颗6代的iU，16G的内存，一个1T的SSD、一个1T的HDD，想要把它改造成一个简易上手的nas。我们要知道作为一个简易的nas需要有什么功能：首先是作为影音中心的功能，由于笔者只看番剧，所以这项功能只需要用ani-rss自动订阅+qBittorrent实现即可，同时影视功能的播放与文件分享功能可以一起用SMB共享实现。接下来是手机相册备份，我这里">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何制作属于自己的Grub主题">
-<meta property="og:url" content="http://example.com/2024/12/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Grub%E4%B8%BB%E9%A2%98/index.html">
+<meta property="og:title" content="安装Windows server作为简易nas使用">
+<meta property="og:url" content="http://example.com/2024/12/10/%E5%AE%89%E8%A3%85Windows%20server%E4%BD%9C%E4%B8%BA%E7%AE%80%E6%98%93nas%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="klolice的学习站点">
-<meta property="og:description" content="最近给[Ventoy]换了一块新的大U盘，搞了很多新的镜像进去，看着[Ventoy]的默认丑界面陷入了沉思，想起来它的主题是基于GRUB的就想着可以自己自定义一套主题来使用。 捷径  从头做GRUB需要额外用linux的系统，鉴于我在上班摸鱼时搞完这一切的宗旨，我决定去一个主题站 下载预设好的主题，在配置文件进行修改就行。 参数配置  在下载好的文件中找到带有theme关键字的txt文件打开它">
+<meta property="og:description" content="前言由于淘汰下来一个联想80NV的笔记本电脑，一颗6代的iU，16G的内存，一个1T的SSD、一个1T的HDD，想要把它改造成一个简易上手的nas。我们要知道作为一个简易的nas需要有什么功能：首先是作为影音中心的功能，由于笔者只看番剧，所以这项功能只需要用ani-rss自动订阅+qBittorrent实现即可，同时影视功能的播放与文件分享功能可以一起用SMB共享实现。接下来是手机相册备份，我这里">
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/images/user.webp">
-<meta property="article:published_time" content="2024-12-03T08:04:28.296Z">
-<meta property="article:modified_time" content="2024-12-03T08:15:33.862Z">
+<meta property="article:published_time" content="2024-12-10T03:31:28.248Z">
+<meta property="article:modified_time" content="2024-12-10T08:01:45.874Z">
 <meta property="article:author" content="klolice">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/user.webp">
@@ -150,15 +150,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Grub%E4%B8%BB%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/10/%E5%AE%89%E8%A3%85Windows%20server%E4%BD%9C%E4%B8%BA%E7%AE%80%E6%98%93nas%E4%BD%BF%E7%94%A8/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">如何制作属于自己的Grub主题</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">安装Windows server作为简易nas使用</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2024-12-03T08:04:28.296Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-12-03</time></li>
+                <li><time datetime="2024-12-10T03:31:28.248Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-12-10</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">klolice</span>
                 </li>
@@ -167,7 +167,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.25K
+                            ~2.08K
                         
                         字
                     </li>
@@ -179,18 +179,36 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1733213733862"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1733817705874"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p>  最近给[Ventoy]换了一块新的大U盘，搞了很多新的镜像进去，看着[Ventoy]的默认丑界面陷入了沉思，想起来它的主题是基于GRUB的就想着可以自己自定义一套主题来使用。</p>
-<h2 id="捷径"><a href="#捷径" class="headerlink" title="捷径"></a>捷径</h2><p>  从头做GRUB需要额外用linux的系统，鉴于我在上班摸鱼时搞完这一切的宗旨，我决定去一个<a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse?cat=109">主题站</a> 下载预设好的主题，在配置文件进行修改就行。</p>
-<h3 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h3><p>  在下载好的文件中找到带有theme关键字的txt文件打开它：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># Main options</span></span><br><span class="line">$ title-text: <span class="string">&quot;&quot;</span></span><br><span class="line">$ desktop-image: <span class="string">&quot;background.png&quot;</span></span><br><span class="line">$ desktop-color: <span class="string">&quot;#000000&quot;</span></span><br><span class="line">$ terminal-font: <span class="string">&quot;PublicSans_Bold_23.pf2&quot;</span></span><br><span class="line">$ terminal-box: <span class="string">&quot;terminal_box_*.png&quot;</span></span><br><span class="line">$ terminal-left: <span class="string">&quot;6%&quot;</span></span><br><span class="line">$ terminal-top: <span class="string">&quot;27%&quot;</span></span><br><span class="line">$ terminal-width: <span class="string">&quot;42%&quot;</span></span><br><span class="line">$ terminal-height: <span class="string">&quot;61%&quot;</span></span><br><span class="line">$ terminal-border: <span class="string">&quot;0&quot;</span></span><br><span class="line"></span><br><span class="line">$ <span class="comment"># Boot menu</span></span><br><span class="line">$ + boot_menu &#123;</span><br><span class="line">$   left = 7%</span><br><span class="line">$   top = 41%</span><br><span class="line">$   width = 40%</span><br><span class="line">$   height = 65%</span><br><span class="line">$   item_font = <span class="string">&quot;Public Sans Bold 21&quot;</span></span><br><span class="line">$   item_color = <span class="string">&quot;#cccccc&quot;</span></span><br><span class="line">$   selected_item_color = <span class="string">&quot;#ffffff&quot;</span></span><br><span class="line">$   icon_width = 75</span><br><span class="line">$   icon_height = 75</span><br><span class="line">$   item_icon_space = 20</span><br><span class="line">$   item_height = 70</span><br><span class="line">$   item_padding = 3</span><br><span class="line">$   item_spacing = 13</span><br><span class="line">$   selected_item_pixmap_style = <span class="string">&quot;select_*.png&quot;</span></span><br><span class="line">$ &#125;</span><br><span class="line"></span><br><span class="line">$ <span class="comment"># Countdown label</span></span><br><span class="line">$ <span class="comment"># You can change the name of default starting OS here</span></span><br><span class="line">$ + label &#123;</span><br><span class="line">$   left = 7%</span><br><span class="line">$   top = 78%</span><br><span class="line">$   align = <span class="string">&quot;left&quot;</span></span><br><span class="line">$   <span class="built_in">id</span> = <span class="string">&quot;__timeout__&quot;</span></span><br><span class="line">$   text = <span class="string">&quot;Booting selected OS in %d...&quot;</span></span><br><span class="line">$   color = <span class="string">&quot;#cccccc&quot;</span></span><br><span class="line">$   font = <span class="string">&quot;DIN 2014 Regular 20&quot;</span></span><br><span class="line">$ &#125;</span><br></pre></td></tr></table></figure>
-<p>  最开始的一段是一些全局属性，title-text是标题，显示在上方中央的位置；desktop-image指定了背景图片，terminal-left和terminal-top则指定了Grub Terminal的左上角的位置，terminal-width和terminal-height就是Terminal的宽度和高度。这些宽度、高度和位置的指定都支持使用像素或者百分比或者两者混合，例如”12%+100”。下文提到的宽度、高度和位置也同理。terminal-font是字体，支持pf2格式。<br>下面的boot_menu和label是两个组件(component)，boot_menu就是给出选项的启动菜单，而label代表你希望自定义显示的一段话。每个组件有自己的属性，其中left, top, width, height含义和全局的类似，就是表示左上角的位置以及组件本身的长宽。item_color和selected_item_color顾名思义，就是每一项的文字默认颜色以及被选中时的颜色。<br>下面一些项指定了图标的长宽，项目文字和图标的距离，项目之间的距离等等，具体可以查阅官方文档，在此不再赘述。而selected_item_pixmap_style是一个非常有意思的东西，它相当于通过9张小图片指定了一个item的四角、四边以及内部应该用什么样的贴图，我们需要给它9张后缀分别为c, e, n, s, w, ne, nw, se, ew的小图片，Grub就会自己把它们拼成一个完整的背景用在这个item上，selected_item_pixmap_style则表明仅有被选中的item适用这个贴图。label组件的各种东西是类似的，需要注意的是id设为” __ timeout __ “就可以使用%d在文字中代表剩余秒数。<br>我们可以对它进行一些简单的修改，比如替换后面的背景图片、字体等。</p>
-<h3 id="Ventoy设置"><a href="#Ventoy设置" class="headerlink" title="Ventoy设置"></a>Ventoy设置</h3><p>  先把配置好的主题文件放进ventoyU盘的路径下，通过VentoyPlugson 工具进行配置，在主题插件里把theme.txt的地址填进去即可<br><img src="/images/ventoy_theme.webp" alt="ventoy主题设置"><br>  查看效果<br><img src="/images/theme_look.webp" alt="主题效果"></p>
+            <div itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于淘汰下来一个联想80NV的笔记本电脑，一颗6代的iU，16G的内存，一个1T的SSD、一个1T的HDD，想要把它改造成一个简易上手的nas。我们要知道作为一个简易的nas需要有什么功能：<br>首先是作为影音中心的功能，由于笔者只看番剧，所以这项功能只需要用ani-rss自动订阅+qBittorrent实现即可，同时影视功能的播放与文件分享功能可以一起用SMB共享实现。<br>接下来是手机相册备份，我这里选择微力同步,通过分享，实现在家连上内网或者连接ZeroTier局域网的环境下，自动进行手机内照片的备份。<br>最后是功耗问题，笔记本的功耗在待机下会有大概15W左右的功耗，不满足我们的低功耗要求，我初步的计划是使用自动休眠以及任务唤醒功能来达到让笔记本在大部分时间保持休眠功耗，来实现低功耗待机的目的。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在笔记本上安装Windows server 2019的系统，把需要的驱动打好，在设置中把笔记本关盖休眠关闭，笔记本关盖屏幕关闭打开。添加如下服务器角色和功能，其中远程桌面服务是为了我们可以通过Windows自带的远程桌面连接来远程控制控制电脑，SMB服务是为了后面我们共享管理进行准备，无线 LAN 服务是为了打开电脑的无线功能，通过双网卡SMB3.0来实现多通道传输数据，优化共享使用质量。其他功能后期用到我们再打开即可。<br><img src="/images/Windows_role.webp" alt="服务器角色"><br><img src="/images/Windows_function.webp" alt="服务器功能"></p>
+<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><h3 id="SMB共享实现"><a href="#SMB共享实现" class="headerlink" title="SMB共享实现"></a>SMB共享实现</h3><p>笔者将共享两个部分，其中一个文件夹是作为影音存贮使用，另一个硬盘作为网络驱动器，方便我在内网环境以及ZeroTier局域网的环境下可以随时备份或者调用文件使用。<br>打开文件和存储服务-共享，新建共享，打开启用基于存取的枚举(A)功能和允许共享缓存(W)功能，在添加需要共享的账户即可。<br>然后我们要关闭SMBv1，打开SMBv2&#x2F;v3,<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3?tabs=server">微软学习</a> 中有相关代码，首先打开PowerShell，输入以下代码：<br>SMBv1<br>检测</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Get-SmbServerConfiguration | Select EnableSMB1Protocol</span><br></pre></td></tr></table></figure>
+<p>禁用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Set-SmbServerConfiguration -EnableSMB1Protocol <span class="variable">$false</span></span><br></pre></td></tr></table></figure>
+<p>启用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Set-SmbServerConfiguration -EnableSMB1Protocol <span class="variable">$true</span></span><br></pre></td></tr></table></figure>
+
+<p>SMBv2<br>检测</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Get-SmbServerConfiguration | Select EnableSMB2Protocol</span><br></pre></td></tr></table></figure>
+<p>禁用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Set-SmbServerConfiguration -EnableSMB2Protocol <span class="variable">$false</span></span><br></pre></td></tr></table></figure>
+<p>启用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Set-SmbServerConfiguration -EnableSMB2Protocol <span class="variable">$true</span></span><br></pre></td></tr></table></figure>
+<p>现在我们就可以愉快的享受SMB共享了，至于ani-rss自动订阅+qBittorrent可以详细查看<a target="_blank" rel="noopener" href="https://docs.wushuo.top/">ani-rss的官网教程</a> 里详细介绍。</p>
+<h3 id="相册同步"><a href="#相册同步" class="headerlink" title="相册同步"></a>相册同步</h3><p>去<a target="_blank" rel="noopener" href="https://www.verysync.com/download.html">微力同步</a> 官网下载电脑版以及手机版<br>在手机上新建一个同步目录，把系统中相册默认的存储位置选择只读密钥分享出去，在设置中打开忽略已删除，防止电脑上的文件影响到手机相册。将密钥输入到电脑端的新建同步中的连接密钥即可。<br>因为笔者手机中将照片删除会把照片重命名为trashed的格式（30天后再删除），为了防止把这些图片也进行同步，我在电脑端设置选项中添加忽略列表“trashed*”，每台手机不同，详情可以参考<a target="_blank" rel="noopener" href="https://www.verysync.com/manual/users/ignoring.html">使用教程</a> 中的忽略文件<br>第一次同步可能需要一些时间。</p>
+<h3 id="功耗问题"><a href="#功耗问题" class="headerlink" title="功耗问题"></a>功耗问题</h3><p>首先我们要先把电脑的休眠功能关闭，这样电脑只会睡眠不会休眠，方便我们后续通过网路或者程序唤醒。<br>同样是通过PowerShell，键入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ powercfg.exe /hibernate off</span><br></pre></td></tr></table></figure>
+<p>然后我们在电源和睡眠中设置2小时休眠。<br>在任务与计划程序中新建一个计划，在常规中[选择不管用户是否登录都要运行]、[使用最高权限运行]，配置选择[Windows Server 2019]。<br><img src="/images/plan_changgui.webp" alt="常规设置"><br>触发器选择几个每天机器会运作的时段，比如笔者的番剧更新一般都在半夜，所以我设置了半夜启动。<br><img src="/images/plan_chufa.webp" alt="触发器设置"><br>操作的话自己写一个自动退出的bat脚本进行即可，只是用来唤醒使用。<br><img src="/images/plan_caozuo.webp" alt="操作设置"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">exit</span> <span class="comment">##bat脚本</span></span><br></pre></td></tr></table></figure>
+<p>接下来在条件中选中[唤醒计算机运行此任务]，这个非常重要，就是靠着这个来唤醒计算机进行活动。<br><img src="/images/plan_tiaojian.webp" alt="条件设置"></p>
+<p>最后我们来配置网络唤醒。<br>在适配器-以太网-属性-配置中的电源管理打开允许此设备唤醒计算机，再在高级中开启魔术封包唤醒。<br><img src="/images/lan_senior.webp" alt="高级设置"><br><img src="/images/lan_power.webp" alt="电源设置"><br>在 BIOS 设置打开这些功能，不同的厂商名称不同，可以参考如下。<br>Automatic Power On<br>Wake on LAN&#x2F;WLAN<br>Power Management<br>Power On by Onboard LAN<br>Power On by PCI-E Devices</p>
+<p>我们现在就拥有一个可以日常需求的轻windows nas。它满足了笔者对于nas的日常需求，同时还具有一定的可扩展性，当然以这台电脑的cpu来看也干不了太多事情，后续升级我也会继续更新。</p>
 </div>
         </div>
         
@@ -244,7 +262,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2024/12/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Grub%E4%B8%BB%E9%A2%98/",
+                text: "http://example.com/2024/12/10/%E5%AE%89%E8%A3%85Windows%20server%E4%BD%9C%E4%B8%BA%E7%AE%80%E6%98%93nas%E4%BD%BF%E7%94%A8/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -256,10 +274,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2024/12/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Grub%E4%B8%BB%E9%A2%98/";
-            const title         = "「如何制作属于自己的Grub主题」";
-            const excerpt       = `  最近给[Ventoy]换了一块新的大U盘，搞了很多新的镜像进去，看着[Ventoy]的默认丑界面陷入了沉思，想起来它的主题是基于GRUB的就想着可以自己自定义一套主题来使用。
-捷径  从头做GRUB需要额外用linux的系统，鉴于...`;
+            const hostUrl       = "http://example.com/2024/12/10/%E5%AE%89%E8%A3%85Windows%20server%E4%BD%9C%E4%B8%BA%E7%AE%80%E6%98%93nas%E4%BD%BF%E7%94%A8/";
+            const title         = "「安装Windows server作为简易nas使用」";
+            const excerpt       = `前言由于淘汰下来一个联想80NV的笔记本电脑，一颗6代的iU，16G的内存，一个1T的SSD、一个1T的HDD，想要把它改造成一个简易上手的nas。我们要知道作为一个简易的nas需要有什么功能：首先是作为影音中心的功能，由于笔者只看番...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -281,7 +298,7 @@
                     
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-12-03T08:15:33.862Z" itemprop="dateModified">最后编辑：2024-12-03</time>
+                    <time datetime="2024-12-10T08:01:45.874Z" itemprop="dateModified">最后编辑：2024-12-10</time>
                 </div>
             </div>
         </footer>
@@ -290,13 +307,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" zerotier搭建（openwrt番外）" href="/2024/11/27/zerotier搭建（openwrt番外）/">&lt; 上一篇</a>
+                <a title=" 如何制作属于自己的Grub主题" href="/2024/12/03/如何制作属于自己的Grub主题/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 安装Windows server作为简易nas使用" href="/2024/12/10/安装Windows server作为简易nas使用/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
